@@ -1,3 +1,22 @@
 [build-system]
 requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "ws2812_spi_python"
+version = "1.0.0"
+description = "WS2812 LED driver using SPI on Linux SBCs"
+authors = [{name = "Matt A", email = "mattaw@users.noreply.github.com"}]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.6"
+dependencies = [
+    "numpy>=1.24,<1.26",
+    "spidev",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+]
